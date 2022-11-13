@@ -20,7 +20,8 @@ Identify your zones here
 | EKS Node            | Amazon EKS managed node groups that is provisioning by udacity-cluster EKS Kubernetes clusters. | t3.medium                                                              | 2                                                               | NO DR                                                                                                        |
 | udacity-db-cluster  | RDS data base cluster                                                                           | db.t2.small                                                            | 1                                                               | NO DR                                                                                                        |
 | udacity-project VPC | Amazon Virtual Private Cloud for udacity project                                                | -                                                                      | -                                                               | -                                                                                                            |
-| Load balancer       | load balancer for grafana dashboard                                                             | -                                                                      | 2                                                               | NO DR                                                                                                        |
+| Load balancer       | Elastic load balancer for grafana dashboard                                                     | -                                                                      | 2                                                               | NO DR                                                                                                        |
+
 
 
 
@@ -28,7 +29,7 @@ Identify your zones here
 
 
 ### Descriptions
-More detailed descriptions of each asset identified above.
+VP 
 
 ## DR Plan
 ### Pre-Steps:
