@@ -19,6 +19,8 @@ Identify your zones here
 | udacity-cluster    | K8S cluster                       | -                                                                      | 1                                                               | NO DR                                                                                                        |
 | EKS Node 1         | VM/Cumputing nodecfor eks cluster | t3.medium                                                              | 1                                                               | NO DR                                                                                                        |
 | udacity-db-cluster | RDS data base cluster             | db.t2.small                                                            | 1                                                               | NO DR                                                                                                        |
+| Load balancer      | load balancer                     |                                                                        | 1                                                               | NO DR                                                                                                        |
+
 
 
 ### Descriptions
