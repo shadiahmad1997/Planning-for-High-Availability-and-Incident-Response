@@ -29,7 +29,7 @@ Identify your zones here
 
 
 ### Descriptions
-###### udacity-project VPC have subnets on all AZ's two public and tow private
+###### udacity-project VPC have two subnets on two AZ's two public and two private
 ###### Load balancer load blancer deployed on two AZ's
 
 
@@ -37,11 +37,16 @@ Identify your zones here
 ### Pre-Steps:
 List steps you would perform to setup the infrastructure in the other region. It doesn't have to be super detailed, but high-level should suffice.
 
-###### Check that all assests deployed on DR region.
-###### Insure that the status for the assests are healthy.
-###### Prepare or document the manuale steps for example change DNS record.    
-###### Check that the terraform for DR same as the terraform for main site.
-
+###### Determine the needed/critical assets to be deployed on DR region.
+###### Ensure that the status of the assets is healthy.
+###### Prepare or document the manual steps to perform DR plan. for example, changing DNS records.    
+###### Check that the terraform for DR same as the terraform for the main site.
 
 ## Steps:
 You won't actually perform these steps, but write out what you would do to "fail-over" your application and database cluster to the other region. Think about all the pieces that were setup and how you would use those in the other region
+###### Deploy the terraform on DR region.
+###### Check that the load balncer on DR site pointed on grafana end point on DR site.
+###### Check that all assests are healthy on DR site.
+###### Stop RDS on main site. then check that the replica become primary.
+###### Stop the eks cluster on main site.
+###### Stop the we ec2 on main site
