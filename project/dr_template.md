@@ -29,8 +29,8 @@ Identify your zones here
 
 
 ### Descriptions
-######udacity-project VPC have subnets on all AZ's two public and tow private
-######Load balancer load blancer deployed on two AZ's
+###### udacity-project VPC have subnets on all AZ's two public and tow private
+###### Load balancer load blancer deployed on two AZ's
 
 
 ## DR Plan
