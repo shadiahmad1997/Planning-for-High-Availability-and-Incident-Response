@@ -9,7 +9,7 @@ histogram_quantile(0.90,sum(rate(flask_http_request_duration_seconds_bucket{job=
 
 ## Throughput
 ### Successful requests per second
-sum(rate(flask_http_request_total{job="ec2",status=~"2.."}[1s]))
+sum(rate(flask_http_request_total{job="ec2",status=~"2.."}[5m]))
 
 ## Error Budget - Remaining Error Budget
 ### The error budget is 20%
