@@ -12,9 +12,14 @@ Identify your zones here
 ## Servers and Clusters
 
 ### Table 1.1 Summary
-| Asset      | Purpose           | Size                                                                   | Qty                                                             | DR                                                                                                           |
-|------------|-------------------|------------------------------------------------------------------------|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| Asset name | Brief description | AWS size eg. t3.micro (if applicable, not all assets will have a size) | Number of nodes/replicas or just how many of a particular asset | Identify if this asset is deployed to DR, replicated, created in multiple locations or just stored elsewhere |
+| Asset              | Purpose                           | Size                                                                   | Qty                                                             | DR                                                                                                           |
+|--------------------|-----------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| Asset name         | Brief description                 | AWS size eg. t3.micro (if applicable, not all assets will have a size) | Number of nodes/replicas or just how many of a particular asset | Identify if this asset is deployed to DR, replicated, created in multiple locations or just stored elsewhere |
+| Ubuntu-Web         | VM/Cumputing server               | t3.micro                                                               | 1                                                               | No DR                                                                                                        |
+| udacity-cluster    | K8S cluster                       | -                                                                      | 1                                                               | NO DR                                                                                                        |
+| EKS Node 1         | VM/Cumputing nodecfor eks cluster | t3.medium                                                              | 1                                                               | NO DR                                                                                                        |
+| udacity-db-cluster | RDS data base cluster             | db.t2.small                                                            | 1                                                               | NO DR                                                                                                        |
+
 
 ### Descriptions
 More detailed descriptions of each asset identified above.
