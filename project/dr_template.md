@@ -43,7 +43,7 @@ Identify your zones here
 List steps you would perform to setup the infrastructure in the other region. It doesn't have to be super detailed, but high-level should suffice.
 ###### Determine the needed/critical assets to be deployed on DR region.
 ###### Ensure that the status of the assets is healthy.
-###### Check the patches and updates have been done on DR assets for ex os upgrade.
+###### Check the patches and updates have been done on DR assets. for example, os upgrade.
 ###### Prepare or document the manual steps to perform DR plan. for example, changing DNS records.    
 ###### Ensure both sites are configured the same.
 ###### Prepare infrastructure as code (IaC) for DR automation.
@@ -51,7 +51,7 @@ List steps you would perform to setup the infrastructure in the other region. It
 
 ## Steps:
 You won't actually perform these steps, but write out what you would do to "fail-over" your application and database cluster to the other region. Think about all the pieces that were setup and how you would use those in the other region
-###### Check that the All assestes have been deployed successfully on SR site.
+###### Check that the All assestes have been deployed successfully on DR site.
 ###### Check that all assests are healthy on DR site.
 ###### Manually force the secondary region to become primary at the database level.
 ###### check that the replica become primary.
