@@ -30,6 +30,10 @@ Identify your zones here
 
 
 ### Descriptions
+###### Ubuntu-Web it's a 3 vm's for hosting web flask python app and we installed promethues exporter.
+###### udacity-cluster it's AWS EKS cluster and manged by AWS, we deployed the k8s workload on it it's created a cross two region.
+###### EKS Node it's eks node group's the number of them two and we can increase them on demand based on the cluster load.
+###### udacity-db-cluster it's RDS cluster for hosting the databases it's have two instances across two AZ's one as writer and other for reader and it's replicated to another RDS cluster on diff region 
 ###### udacity-project VPC have two subnets on two AZ's two public and two private
 ###### Load balancer load blancer deployed on two AZ's
 
@@ -37,17 +41,18 @@ Identify your zones here
 ## DR Plan
 ### Pre-Steps:
 List steps you would perform to setup the infrastructure in the other region. It doesn't have to be super detailed, but high-level should suffice.
-
 ###### Determine the needed/critical assets to be deployed on DR region.
 ###### Ensure that the status of the assets is healthy.
+###### Check the patches and updates have been done on DR assets for ex os upgrade.
 ###### Prepare or document the manual steps to perform DR plan. for example, changing DNS records.    
-###### Check that the terraform for DR same as the terraform for the main site.
+###### Ensure both sites are configured the same.
+###### Prepare infrastructure as code (IaC) for DR automation.
+###### Deploy the terraform on DR region.
 
 ## Steps:
 You won't actually perform these steps, but write out what you would do to "fail-over" your application and database cluster to the other region. Think about all the pieces that were setup and how you would use those in the other region
-###### Deploy the terraform on DR region.
-###### Check that the load balncer on DR site pointed on grafana end point on DR site.
+###### Check that the All assestes have been deployed successfully on SR site.
 ###### Check that all assests are healthy on DR site.
-###### Stop RDS on main site. then check that the replica become primary.
-###### Stop the eks cluster on main site.
-###### Stop the we ec2 on main site
+###### Manually force the secondary region to become primary at the database level.
+###### check that the replica become primary.
+###### Point your DNS to your secondary region
