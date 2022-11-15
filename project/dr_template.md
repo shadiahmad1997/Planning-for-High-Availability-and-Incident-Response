@@ -53,6 +53,10 @@ List steps you would perform to setup the infrastructure in the other region. It
 You won't actually perform these steps, but write out what you would do to "fail-over" your application and database cluster to the other region. Think about all the pieces that were setup and how you would use those in the other region
 ###### Check that the All assestes have been deployed successfully on DR site.
 ###### Check that all assests are healthy on DR site.
-###### Manually force the secondary region to become primary at the database level.
+###### Failover your database replication instances to another region
+ - Manually force the secondary region to become primary at the database level, or
+    - Automatically failover the database by health checks
 ###### check that the replica become primary.
 ###### Point your DNS to your secondary region
+    - This can be done with a name provider like Amazon route 53
+    - point DNS to the load balancer. This way you can have multiple instances behind 1 IP in a region. During a failover scenario, you would fail over the single DNS entry at your DNS provider to point to the DR site. This is much more intelligent than pointing to a single instance of a web server.
