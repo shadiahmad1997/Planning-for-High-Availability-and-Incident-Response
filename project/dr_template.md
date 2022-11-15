@@ -41,22 +41,22 @@ Identify your zones here
 ## DR Plan
 ### Pre-Steps:
 List steps you would perform to setup the infrastructure in the other region. It doesn't have to be super detailed, but high-level should suffice.
-###### Determine the needed/critical assets to be deployed on DR region.
-###### Ensure that the status of the assets is healthy.
-###### Check the patches and updates have been done on DR assets. for example, os upgrade.
-###### Prepare or document the manual steps to perform DR plan. for example, changing DNS records.    
-###### Ensure both sites are configured the same.
-###### Prepare infrastructure as code (IaC) for DR automation.
-###### Deploy the terraform on DR region.
+###### - Determine the needed/critical assets to be deployed on DR region.
+###### - Ensure that the status of the assets is healthy.
+###### - Check the patches and updates have been done on DR assets. for example, os upgrade.
+###### - Prepare or document the manual steps to perform DR plan. for example, changing DNS records.    
+###### - Ensure both sites are configured the same.
+###### - Prepare infrastructure as code (IaC) for DR automation.
+###### - Deploy the terraform on DR region.
 
 ## Steps:
 You won't actually perform these steps, but write out what you would do to "fail-over" your application and database cluster to the other region. Think about all the pieces that were setup and how you would use those in the other region
-###### Check that the All assestes have been deployed successfully on DR site.
-###### Check that all assests are healthy on DR site.
-###### Failover your database replication instances to another region
+###### - Check that the All assestes have been deployed successfully on DR site.
+###### - Check that all assests are healthy on DR site.
+###### - Failover your database replication instances to another region
     - Manually force the secondary region to become primary at the database level, or
     - Automatically failover the database by health checks
-###### check that the replica become primary.
-###### Point your DNS to your secondary region
+###### - check that the replica become primary.
+###### - Point your DNS to your secondary region
     - This can be done with a name provider like Amazon route 53
     - point DNS to the load balancer. This way you can have multiple instances behind 1 IP in a region. During a failover scenario, you would fail over the single DNS entry at your DNS provider to point to the DR site. This is much more intelligent than pointing to a single instance of a web server.
