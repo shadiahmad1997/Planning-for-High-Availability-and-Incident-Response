@@ -54,7 +54,7 @@ You won't actually perform these steps, but write out what you would do to "fail
 ###### Check that the All assestes have been deployed successfully on DR site.
 ###### Check that all assests are healthy on DR site.
 ###### Failover your database replication instances to another region
- - Manually force the secondary region to become primary at the database level, or
+    - Manually force the secondary region to become primary at the database level, or
     - Automatically failover the database by health checks
 ###### check that the replica become primary.
 ###### Point your DNS to your secondary region
